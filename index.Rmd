@@ -25,7 +25,7 @@ For determining enrollment figures for Indian languages, a sum of enrollments fo
 
 
 ```{r cache=FALSE, echo=FALSE, fig.height=8,fig.width=12}
-lang=read.csv("languages.csv")
+lang=read.csv("languageskdn.csv")
 langmajor=lang[-c(2:12)]
 
 library(reshape2)
