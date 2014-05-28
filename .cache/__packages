@@ -1,11 +1,6 @@
 base
-datasets
 ggplot2
-graphics
-grDevices
-methods
+knitr
 rCharts
 reshape2
 slidify
-stats
-utils

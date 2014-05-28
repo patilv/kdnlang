@@ -1,5 +1,5 @@
 ---
-title       : Interest in Modern Languages other than English in the US
+title       : Data Mining Modern Languages Enrollments in US
 subtitle    : 
 author      : Vivek Patil
 job         : 
@@ -9,7 +9,8 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 ---
-## Interest in Modern Languages Other than English in the US
+## Data Mining Modern Languages Enrollments in US
+
 
 This is an extension of a recent [blog post published by Vivek Patil on Modern Languages Enrollments in the US](http://patilv.github.io/Enrollments-in-US-in-Different-Languages-using-rCharts-and-ggplot2/). Using data from [MLA surveys of enrollments in institutions of US higher education between 1983 and 2009](https://www.mla.org/flsurvey_search), he found that enrollments in Indian languages were low, compared to enrollments in 10 other languages, besides English. These 10 languages were French, German, Italian, Japanese, Spanish, Arabic, Chinese, Korean, Portuguese, and Russian. In this extension, we use data from 22 survey years since 1958, [the first year for which the modern languages enrollment database provides data](https://www.mla.org/flsurvey_search), to study the pattern and number of students enrolling in these 11 languages.
 
@@ -18,7 +19,7 @@ Why is a knowledge of different languages important and what is the general perc
 ### Data
 
 Enrollment data for US higher education institutions were collected for 22 survey years between 1958 and 2009 for 11 different languages. These include 1958-1961, 1963, 1965, 1968-1972, 1974, 1977, 1980, 1983, 1986, 1990, 1995, 1998, 2002, 2006, and 2009.
-For determining enrollment figures for Indian languages, a sum of enrollments for Bengali, Gujarati, Hindi, Hindi-Urdu, Kannada, Malayalam, Marathi, Punjabi, Tamil, Telugu, and Urdu was taken. This was consistent with the procedure [Alyssa Ayres used in a recent article in Forbes.](http://www.forbes.com/sites/alyssaayres/2014/05/01/thanks-john-oliver-why-india-isnt-a-big-focus-for-u-s-television/) For more information on the enrollment data, assumptions in certain surveys and limitations associated with specific surveys and years, please see [here](https://www.mla.org/about_search_flsurvey) and [here](http://www.mla.org/aggregate_enrollment). **One point to remember is that in 1969 and 1971, enrollment numbers were for summer instead of the fall.**     
+For determining enrollment figures for Indian languages, a sum of enrollments for Bengali, Gujarati, Hindi, Hindi-Urdu, Kannada, Malayalam, Marathi, Punjabi, Tamil, Telugu, and Urdu was taken. This was consistent with the procedure [Alyssa Ayres used in a recent article in Forbes.](http://www.forbes.com/sites/alyssaayres/2014/05/01/thanks-john-oliver-why-india-isnt-a-big-focus-for-u-s-television/) For more information on the enrollment data, assumptions in certain surveys and limitations associated with specific surveys and years, please see [here](https://www.mla.org/about_search_flsurvey) and [here](http://www.mla.org/aggregate_enrollment). **Please note that in 1969 and 1971, enrollment numbers were for summer instead of the fall.**     
 
 ### Pattern of Enrollments 1958-2009
 
@@ -26,11 +27,11 @@ For determining enrollment figures for Indian languages, a sum of enrollments fo
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
 
 
-Besides French, German, and Russian, interest in other languages studied in this article is on a rise. Total enrollments in this set of 11 languages are also rising. Please note that the population of the US jumped a little more than 1.75 times between 1958 and 2009. [It was approximately [174.88 million in 1958](https://www.census.gov/popest/data/national/totals/pre-1980/tables/popclockest.txt) and about [307 million in 2009](https://www.census.gov/popest/data/historical/2000s/vintage_2009/).]   
+For most languages, there were dips in enrollments in 1969 and 1971, which are perhaps because of the way enrollments were reported for those two years (see note above).  Besides French, German, and Russian, interest in other languages studied in this article is on a rise. Total enrollments in this set of 11 languages are also rising. Please note that the population of the US jumped a little more than 1.75 times between 1958 and 2009. [It was approximately [174.88 million in 1958](https://www.census.gov/popest/data/national/totals/pre-1980/tables/popclockest.txt) and about [307 million in 2009](https://www.census.gov/popest/data/historical/2000s/vintage_2009/).]   
 
 ### Enrollments between 1958-2009
 
-The [2009 MLA survey report](http://www.mla.org/pdf/2009_enrollment_survey_pr.pdf) mentioned that Spanish, German and French (in that order) were the three most popular languages. The graph shown below indicates that Spanish, French, and German were the top three languages (among the languages being considered for this article) from the very beginning of the MLA database in 1958. In fact, among the 11 languages being studied, German has been a perennial third, whereas French was ahead of Spanish until 1969. In 1969, Spanish took over as the number one language of study. This graph also suggests that since the survey in 1986, enrollments in Spanish grew tremendously. Could it be that the growth in total enrollments is being driven primarily by the growth in enrollments in Spanish? 
+The [2009 MLA survey report](http://www.mla.org/pdf/2009_enrollment_survey_pr.pdf) mentioned that Spanish, German and French (in that order) were the three most popular languages. The graph shown below provides loess smoothed enrollment patterns. The graph indicates that Spanish, French, and German were the top three languages (among the languages being considered for this article) from the very beginning of the MLA database in 1958. In fact, among the 11 languages being studied, German has been a perennial third, whereas French was ahead of Spanish until 1969, when the latter took over as the number one language of study. Could it be that the growth in total enrollments is being driven primarily by the growth in enrollments in Spanish? 
 
 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
@@ -39,7 +40,7 @@ The [2009 MLA survey report](http://www.mla.org/pdf/2009_enrollment_survey_pr.pd
 
 ### Interactive comparison of total enrollments with and without Spanish, and comparison between one or more languages
 
-The interactive chart shown below begins with a comparison of the total enrollments in 11 languages (upper line) being studied here with the total enrollments in 10 languages, after dropping Spanish (lower line). **Hovering over the chart can provide information on the value during a particular year.** The chart suggests that after dropping Spanish, total enrollments in the remaining 10 languages appear to be increasing at a sluggish pace. In fact, total enrollment numbers (without Spanish) are still lower than they were in 1965 or 1968, when the overall US population was substantially lower than it is now. 
+The interactive chart shown below begins with a comparison of the total enrollments in 11 languages being studied here  (upper line) with the total enrollments in 10 languages, after dropping Spanish (lower line). **Hovering over the chart can provide information on the value during a particular year.** The chart suggests that after dropping Spanish, total enrollments in the remaining 10 languages appears to be increasing at a very sluggish pace. In fact, total enrollment numbers (without Spanish) are still lower than they were in 1965 or 1968, when the overall US population was substantially lower than it is now. 
 
 #### Further Interactivity
 
@@ -48,7 +49,8 @@ Clicking on a dot/circle of the legend can make that language appear/disappear f
 
 
 
-<iframe src="http://bl.ocks.org/patilv/raw/bd1d40544e1d0e37c348/" width=1200 height=450> </iframe>
+
+<iframe height="450" width="100%" src="http://bl.ocks.org/patilv/raw/bd1d40544e1d0e37c348/"></iframe>
  
 ### Conclusion
 
